@@ -1,6 +1,0 @@
-HOST_NAME=http\://api.theosoft.net/
-SERVICE_PATH=webservice/theoservice.asmx/
-SERVICE_NAME_IP_ADDR_PARAM=MyIP
-SERVICE_NAME_IP_ADDR=GetAddress
-SERVICE_NAME_WEATHER=GetWeatherByIP
-SERVICE_NAME_WEATHER_PARAM=MyIP
