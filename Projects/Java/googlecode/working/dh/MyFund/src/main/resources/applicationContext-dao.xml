@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd"
+    default-autowire="byName">
+	
+	<!-- user -->
+    <bean name="usrUserDAO" class="com.zj198.dao.hibernate.UsrUserDAOImpl"/>
+	<bean name="usrLoginhistoryDAO" class="com.zj198.dao.hibernate.UsrLoginhistoryDAOImpl"/>
+	<bean name="usrPersonDAO" class="com.zj198.dao.hibernate.UsrPersonDAOImpl"/>
+	<bean name="usrBankDAO" class="com.zj198.dao.hibernate.UsrBankDAOImpl"/>
+	<bean name="usrFinanceorgDAO" class="com.zj198.dao.hibernate.UsrFinanceorgDAOImpl"/>
+	<bean name="usrServiceorgDAO" class="com.zj198.dao.hibernate.UsrServiceorgDAOImpl"/>
+	<bean name="usrCompanyDAO" class="com.zj198.dao.hibernate.UsrCompanyDAOImpl"/>
+	
+	
+	<!-- dictionary -->
+    <bean name="dicProvinceDAO" class="com.zj198.dao.hibernate.DicProvinceDAOImpl"/>
+    <bean name="dicBankDAO" class="com.zj198.dao.hibernate.DicBankDAOImpl"/>
+    <bean name="dicCityDAO" class="com.zj198.dao.hibernate.DicCityDAOImpl"/>
+    <bean name="dicDistrictDAO" class="com.zj198.dao.hibernate.DicDistrictDAOImpl"/>
+    <bean name="dicCommonDAO" class="com.zj198.dao.hibernate.DicCommonDAOImpl"/>
+    <bean name="dicIndustryDAO" class="com.zj198.dao.hibernate.DicIndustryDAOImpl"/>
+    <bean name="dicUsertypeDAO" class="com.zj198.dao.hibernate.DicUsertypeDAOImpl"/>
+    
+    <!-- 理财 -->
+    <bean name="fundBaseDAO" class="com.zj198.dao.hibernate.FudBaseDAOImpl"/>
+    <bean name="fundHistoryDAO" class="com.zj198.dao.hibernate.FudHisvalueDAOImpl"/>
+    <bean name="prdBankfinanceDAO" class="com.zj198.dao.hibernate.PrdBankfinanceDAOImpl"/>
+    
+    <!-- admin -->
+    <bean name="admUserDAO" class="com.zj198.dao.hibernate.AdmUserDAOImpl"/>
+	<bean name="admFunctionDAO" class="com.zj198.dao.hibernate.AdmFunctionDAOImpl"/>
+	
+	<!-- 系统通知和消息队列 -->
+	<bean name="ntyMessageDAO" class="com.zj198.dao.hibernate.NtyMessageDAOImpl"/>
+    <bean name="ntyMessageQueueDAO" class="com.zj198.dao.hibernate.NtyMessageQueueDAOImpl"/>
+    <bean name="ntyReceiverDAO" class="com.zj198.dao.hibernate.NtyReceiverDAOImpl"/>
+   
+    <!-- 新闻 -->
+    <bean name="knwTypeDAO" class="com.zj198.dao.hibernate.KnwTypeDAOImpl"/>
+    <bean name="knwTitleDAO" class="com.zj198.dao.hibernate.KnwTitleDAOImpl"/>
+    <bean name="knwContentDAO" class="com.zj198.dao.hibernate.KnwContentDAOImpl"/>
+    
+    <!-- 信息服务 -->
+    <bean name="sinTypeDAO" class="com.zj198.dao.hibernate.SinTypeDAOImpl"/>
+    <bean name="sinItemDAO" class="com.zj198.dao.hibernate.SinItemDAOImpl"/>
+    <bean name="sinOrderDAO" class="com.zj198.dao.hibernate.SinOrderDAOImpl"></bean>
+    
+    <!-- 会员付费 -->
+    <bean name="mchTypeDAO" class="com.zj198.dao.hibernate.MchTypeDAOImpl"/>
+    <bean name="mchChargeDAO" class="com.zj198.dao.hibernate.MchChargeDAOImpl"/>
+    <bean name="mchBankDAO" class="com.zj198.dao.hibernate.MchBankDAOImpl"/>
+    
+    <!-- 融资 -->
+   <bean id="ordLoanRequestDAO" class="com.zj198.dao.hibernate.OrdLoanRequestDAOImpl"/>
+   <bean id="ordBaseRateDAO" class="com.zj198.dao.hibernate.OrdBaseRateDAOImpl"/>
+	<bean id="ordFinanceApplyDAO" class="com.zj198.dao.hibernate.OrdFinanceApplyDAOImpl"/>
+	<bean id="ordFinanceApplyAttachDAO" class="com.zj198.dao.hibernate.OrdFinanceApplyAttachDAOImpl"/>
+	<bean id="ordFinanceApplyCheckDAO" class="com.zj198.dao.hibernate.OrdFinanceApplyCheckDAOImpl"/>
+	<bean id="ordFinanceInterestDAO" class="com.zj198.dao.hibernate.OrdFinanceInterestDAOImpl"/>
+	<bean id="ordFinanceProductDAO" class="com.zj198.dao.hibernate.OrdFinanceProductDAOImpl"/>
+	<bean id="ordDatafileListDAO" class="com.zj198.dao.hibernate.OrdDatafileListDAOImpl"/>
+	<bean id="ordFinanceAreaDAO" class="com.zj198.dao.hibernate.OrdFinanceAreaDAOImpl"/>
+	<bean id="ordFinanceDatafileDAO" class="com.zj198.dao.hibernate.OrdFinanceDatafileDAOImpl"/>
+	<bean id="ordFinanceInductyDAO" class="com.zj198.dao.hibernate.OrdFinanceInductyDAOImpl"/>	
+	
+   
+</beans>

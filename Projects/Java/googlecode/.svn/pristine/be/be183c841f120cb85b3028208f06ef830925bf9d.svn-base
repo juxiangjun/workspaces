@@ -1,0 +1,43 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+	<package name="admin" namespace="/admin" extends="base">
+		<default-interceptor-ref name="adminInterceptor"/>
+		<global-results>
+			<result name="login">/WEB-INF/web/admin/login.jsp</result>
+		</global-results>
+		<action name="Account" class="com.zj198.action.admin.AccountAction">
+			<interceptor-ref name="defaultStack"/>
+			<result name="success" type="redirect">/admin/Admin.act</result>
+		</action>
+		<action name="Admin" class="com.zj198.action.admin.AdminAction">
+			<result name="index">/WEB-INF/web/admin/index.jsp</result>
+		</action>
+		
+		<action name="SysParam" class="com.zj198.action.admin.system.SysParameterAction">
+			<result name="success">/WEB-INF/web/admin/system/sysParameter.jsp</result>
+		</action>
+		
+		<action name="serviceInfoAuthorize" class="com.zj198.action.admin.authorize.ServiceInfoAuthorizeAction">
+			<result name="unauthorizedServiceInfo">/WEB-INF/web/admin/authorize/serviceItemHome4Admin.jsp</result>
+			<result name="siDetail">/WEB-INF/web/admin/authorize/siDetail.jsp</result>
+		</action>
+		
+		<action name="knwType" class="com.zj198.action.admin.news.KnwTypeAction">
+			<result name="success">/WEB-INF/web/admin/news/knwTypeHome.jsp</result>
+    		<result name="edit">/WEB-INF/web/admin/news/editKnwType.jsp</result>
+		</action>
+		
+		<action name="knwTitle" class="com.zj198.action.admin.news.KnwTitleAction">
+			<result name="success">/WEB-INF/web/admin/news/knwTitleHome.jsp</result>
+    		<result name="edit">/WEB-INF/web/admin/news/editKnwTitle.jsp</result>
+		</action>
+		
+		<action name="knwContent" class="com.zj198.action.admin.news.KnwContentAction">
+			<result name="success">/WEB-INF/web/admin/news/knwContentHome.jsp</result>
+            <result name="edit">/WEB-INF/web/admin/news/editKnwContent.jsp</result>
+		</action>
+		
+		
+	</package>
+</struts>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+     <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="DataSource" 
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver">
+		</property> 
+		<property name="url"
+			value="jdbc:mysql://127.0.0.1:3306/ebs">
+		</property>
+		<property name="username" value="ebs"></property>
+		<property name="password" value="ebs"></property>
+	</bean>
+	
+	<bean id="SessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="DataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.query.factory_class"> 
+				    <!--
+				    	org.hibernate.hql.classic.ClassicQueryTranslatorFactory
+				    	is only for Hibernate 2.x
+				    -->
+				    org.hibernate.hql.ast.ASTQueryTranslatorFactory 
+				</prop>
+			</props>
+		</property>
+		<property name="hibernate.search.default.directory_provider" value="filesystem"/> 
+		<property name="hibernate.search.default.indexBase" value="/tmp/ebs/lucene/indexes"/> 
+		<property name="annotatedClasses">
+			<list>
+			<value>org.tju.ebs.bean.OrgOccupation</value>
+			<value>org.tju.ebs.bean.SysView</value>
+			<value>
+				org.tju.ebs.bean.OrgEmployeeDepartment
+			</value>
+			<value>org.tju.ebs.bean.SysRegistration</value>
+			<value>org.tju.ebs.bean.SysProvince</value>
+			<value>org.tju.ebs.bean.OrgPosition</value>
+			<value>org.tju.ebs.bean.SysObject</value>
+			<value>org.tju.ebs.bean.Address</value>
+			<value>
+				org.tju.ebs.bean.SysObjectRelated
+			</value>
+			<value>org.tju.ebs.bean.Contact</value>
+			<value>org.tju.ebs.bean.OrgCompany</value>
+			<value>org.tju.ebs.bean.SysMenu</value>
+			<value>org.tju.ebs.bean.OrgDepartment</value>
+			<value>org.tju.ebs.bean.SysModel</value>
+			<value>org.tju.ebs.bean.OrgCompanyParam</value>
+			<value>org.tju.ebs.bean.OrgCompanyModel</value>
+			<value>org.tju.ebs.bean.OrgBank</value>
+			<value>org.tju.ebs.bean.SysGroup</value>
+			<value>
+				org.tju.ebs.bean.SysCurrencyExchange
+			</value>
+			<value>
+				org.tju.ebs.bean.SysObjectProperty
+			</value>
+			<value>org.tju.ebs.bean.SysUser</value>
+			<value>
+				org.tju.ebs.bean.ModelTransaction
+			</value>
+			<value>org.tju.ebs.bean.SysGroupMenu</value>
+			<value>org.tju.ebs.bean.OrgEmployee</value>
+			<value>org.tju.ebs.bean.SysCountry</value>
+			<value>org.tju.ebs.bean.SysCity</value>
+			<value>org.tju.ebs.bean.SysGroupUser</value>
+			<value>org.tju.ebs.bean.SysHelp</value>
+			<value>org.tju.ebs.bean.SysViewDetail</value>
+			<value>
+				org.tju.ebs.bean.OrgEmployeePosition
+			</value>
+			<value>
+				org.tju.ebs.bean.OrgCompanyAddress
+			</value>
+			<value>org.tju.ebs.bean.SysCurrency</value>
+			<value>org.tju.ebs.bean.OrgPerson</value>
+			<value>
+				org.tju.ebs.bean.OrgEmployeeOccupation
+			</value>
+			<value>org.tju.ebs.bean.SysParam</value>
+			<value>org.tju.ebs.bean.ProdBrand</value>
+			<value>org.tju.ebs.bean.ProdBrand</value>
+			<value>org.tju.ebs.bean.ProdItem</value>
+			<value>org.tju.ebs.bean.ProdStdPrice</value>
+			<value>org.tju.ebs.bean.ProdPackage</value>
+			<value>org.tju.ebs.bean.ProdCategory</value>
+			<value>org.tju.ebs.bean.ProdProperty</value>
+			<value>
+				org.tju.ebs.bean.ProdPropertyValue
+			</value></list>
+		</property>
+	</bean>
+	
+	<bean id="TransactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="SessionFactory" />
+	</bean>
+	<bean id="AddressDAO" class="org.tju.ebs.domain.dao.AddressDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="ContactDAO"
+		class="org.tju.ebs.domain.dao.ContactDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="ModelTransactionDAO" class="org.tju.ebs.domain.dao.ModelTransactionDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean><bean id="OrgBankDAO"
+		class="org.tju.ebs.domain.dao.OrgBankDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="OrgCompanyDAO"
+		class="org.tju.ebs.domain.dao.OrgCompanyDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="OrgCompanyAddressDAO"
+		class="org.tju.ebs.domain.dao.OrgCompanyAddressDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="OrgCompanyModelDAO"
+		class="org.tju.ebs.domain.dao.OrgCompanyModelDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="OrgDepartmentDAO"
+		class="org.tju.ebs.domain.dao.OrgDepartmentDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="OrgEmployeeDAO"
+		class="org.tju.ebs.domain.dao.OrgEmployeeDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="OrgEmployeeDepartmentDAO"
+		class="org.tju.ebs.domain.dao.OrgEmployeeDepartmentDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="OrgEmployeeOccupationDAO"
+		class="org.tju.ebs.domain.dao.OrgEmployeeOccupationDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="OrgEmployeePositionDAO"
+		class="org.tju.ebs.domain.dao.OrgEmployeePositionDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="OrgPersonDAO"
+		class="org.tju.ebs.domain.dao.OrgPersonDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="OrgPositionDAO"
+		class="org.tju.ebs.domain.dao.OrgPositionDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="OrgOccupationDAO"
+		class="org.tju.ebs.domain.dao.OrgOccupationDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="SysCityDAO" class="org.tju.ebs.domain.dao.SysCityDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean><bean id="SysCountryDAO" class="org.tju.ebs.domain.dao.SysCountryDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean><bean id="SysCurrencyDAO"
+		class="org.tju.ebs.domain.dao.SysCurrencyDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="SysCurrencyExchangeDAO" class="org.tju.ebs.domain.dao.SysCurrencyExchangeDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean><bean id="SysGroupDAO"
+		class="org.tju.ebs.domain.dao.SysGroupDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="SysGroupMenuDAO"
+		class="org.tju.ebs.domain.dao.SysGroupMenuDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	
+	
+	<bean id="SysGroupUserDAO"
+		class="org.tju.ebs.domain.dao.SysGroupUserDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="SysHelpDAO" class="org.tju.ebs.domain.dao.SysHelpDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean><bean id="SysMenuDAO"
+		class="org.tju.ebs.domain.dao.SysMenuDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="SysModelDAO"
+		class="org.tju.ebs.domain.dao.SysModelDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="SysParamDAO"
+		class="org.tju.ebs.domain.dao.SysParamDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="SysObjectDAO" class="org.tju.ebs.domain.dao.SysObjectDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean><bean id="SysObjectPropertyDAO" class="org.tju.ebs.domain.dao.SysObjectPropertyDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean><bean id="SysObjectRelatedDAO" class="org.tju.ebs.domain.dao.SysObjectRelatedDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean><bean id="SysProvinceDAO" class="org.tju.ebs.domain.dao.SysProvinceDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean><bean id="SysRegistrationDAO" class="org.tju.ebs.domain.dao.SysRegistrationDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean><bean id="SysUserDAO" class="org.tju.ebs.domain.dao.SysUserDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean><bean id="SysViewDAO"
+		class="org.tju.ebs.domain.dao.SysViewDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>	
+	<bean id="ProdBrandDAO"
+		class="org.tju.ebs.domain.dao.ProdBrandDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory"></ref>
+		</property>
+	</bean>
+	<bean id="ProdItemDAO"
+		class="org.tju.ebs.domain.dao.ProdItemDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="ProdStdPriceDAO"
+		class="org.tju.ebs.domain.dao.ProdStdPriceDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="ProdPackageDAO"
+		class="org.tju.ebs.domain.dao.ProdPackageDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="ProdCategoryDAO"
+		class="org.tju.ebs.domain.dao.ProdCategoryDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="ProdPropertyDAO"
+		class="org.tju.ebs.domain.dao.ProdPropertyDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean>
+	<bean id="ProdPropertyValueDAO"
+		class="org.tju.ebs.domain.dao.ProdPropertyValueDAO">
+		<property name="sessionFactory">
+			<ref bean="SessionFactory" />
+		</property>
+	</bean></beans>

@@ -1,0 +1,5 @@
+package org.tju.ebs.handler;
+
+public interface IRegistrationHandler {
+
+}

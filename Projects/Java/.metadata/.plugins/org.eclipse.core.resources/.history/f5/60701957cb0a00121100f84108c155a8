@@ -1,0 +1,45 @@
+package org.tju.ebs.interceptor;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+public class ElapsedInterceptor extends HandlerInterceptorAdapter {
+
+	private Date startTime;
+	private Date endTime;
+	
+	public boolean preHandle(HttpServletRequest request, 
+			HttpServletResponse response, Object handler) throws Exception{
+		Calendar c = Calendar.getInstance();
+		startTime = c.getTime();
+		System.out.println("Start Time:" + startTime);
+		return true;
+	}
+	
+	public boolean postHandle(HttpServletRequest request, 
+			HttpServletResponse response, Object handler) throws Exception{
+		System.out.print(this.getClass().getName()+"::PostHandler");
+		return true;
+	}
+	
+	public boolean afterCompletion(HttpServletRequest request, 
+			HttpServletResponse response, Object handler) throws Exception{
+		System.out.print(this.getClass().getName()+"::afterCompletion");
+		
+		Calendar c = Calendar.getInstance();
+		endTime = c.getTime();
+		int elapsed = endTime.compareTo(startTime);
+		System.out.println("End Time:" + endTime);
+		System.out.println(elapsed);
+		request.getSession().setAttribute("elapsed", elapsed);
+		return true;
+	}
+	
+	
+	
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="com.zj198.util.Constants"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.FileSystemXmlApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.ImportResource"/>
+<fullyQualifiedTypeName name="org.tju.ebs.utils.Mail"/>
+<fullyQualifiedTypeName name="org.tju.ebs.utils.Constants"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.tju.ebs.entity.MessageTemplateExample"/>
+<fullyQualifiedTypeName name="org.tju.ebs.persistence.MessageTemplateMapper"/>
+<fullyQualifiedTypeName name="java.sql.Timestamp"/>
+<fullyQualifiedTypeName name="org.tju.ebs.utils.DateUtil"/>
+<fullyQualifiedTypeName name="org.tju.ebs.utils.ErrorMessage"/>
+<fullyQualifiedTypeName name="org.apache.soap.encoding.SOAPMappingRegistry"/>
+<fullyQualifiedTypeName name="org.apache.soap.encoding.soapenc.BeanSerializer"/>
+<fullyQualifiedTypeName name="org.apache.soap.rpc.Call"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="org.apache.soap.rpc.Response"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="org.springframework.aop.AfterAdvice"/>
+<fullyQualifiedTypeName name="org.aspectj.lang.annotation.Aspect"/>
+<fullyQualifiedTypeName name="org.aspectj.lang.annotation.Before"/>
+<fullyQualifiedTypeName name="org.aspectj.lang.annotation.AfterReturning"/>
+<fullyQualifiedTypeName name="org.aspectj.lang.annotation.Pointcut"/>
+<fullyQualifiedTypeName name="org.springframework.aop.AfterReturningAdvice"/>
+<fullyQualifiedTypeName name="org.springframework.aop.BeforeAdvice"/>
+<fullyQualifiedTypeName name="org.springframework.aop.MethodBeforeAdvice"/>
+<fullyQualifiedTypeName name="org.aspectj.lang.JoinPoint"/>
+<fullyQualifiedTypeName name="org.tju.ebs.entity.Message"/>
+</qualifiedTypeNameHistroy>

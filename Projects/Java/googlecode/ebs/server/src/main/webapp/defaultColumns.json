@@ -1,0 +1,16 @@
+{"success":"true", "total":"8", 
+	"items":
+	[
+		{"fieldCode":"createdDate", "visible":"0", "dataType":"date", "maxValue":"60", "fieldId":"created_date"},
+		{"fieldCode":"createdBy", "visible":"0", "dataType":"string", "maxValue":"60", "fieldId":"created_by"},
+		{"fieldCode":"lastUpdatedDate", "visible":"0", "dataType":"string", "maxValue":"60", "fieldId":"last_updated_date"},
+		{"fieldCode":"lastUpdatedBy", "visible":"0", "dataType":"string", "maxValue":"60", "fieldId":"last_updated_by"},
+		{"fieldCode":"lastViewedDate", "visible":"0", "dataType":"string", "maxValue":"60", "fieldId":"last_viewed_date"},
+		{"fieldCode":"lastViewedBy", "visible":"0", "dataType":"string", "maxValue":"60", "fieldId":"last_viewed_by"},
+		{"fieldCode":"currViewedDate", "visible":"0", "dataType":"string", "maxValue":"60", "fieldId":"curr_viewed_date"},
+		{"fieldCode":"currViewedBy", "visible":"0", "dataType":"string", "maxValue":"60", "fieldId":"curr_viewed_by"},
+		{"fieldCode":"deletedDate", "visible":"0", "dataType":"string", "maxValue":"60", "fieldId":"deleted_date"},
+		{"fieldCode":"deletedBy", "visible":"0", "dataType":"string", "maxValue":"60", "fieldId":"deleted_by"},
+		{"fieldCode":"deletedFlag", "visible":"0", "dataType":"string", "maxValue":"60", "fieldId":"deleted_flag"}
+	]
+}

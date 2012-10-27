@@ -1,0 +1,11 @@
+package com.zj198.dao.hibernate;
+import com.zj198.dao.OrdFinanceInterestDAO;
+import com.zj198.model.OrdFinanceInterest;
+/**
+ * @author 岳龙
+ * Description:
+ * CreateAuthor:岳龙
+ * CreateDate:2012-7-05 15:09:59
+ */
+public class OrdFinanceInterestDAOImpl extends HibernateDAO<OrdFinanceInterest, Integer> implements OrdFinanceInterestDAO {
+}

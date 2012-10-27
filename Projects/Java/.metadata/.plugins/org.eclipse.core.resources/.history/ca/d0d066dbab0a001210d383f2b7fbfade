@@ -1,0 +1,30 @@
+package org.tju.ebs.interceptor;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+public class MaintenanceInterceptor extends HandlerInterceptorAdapter {
+	
+	private String day;
+	private String startTime;
+	private String endTime;
+	
+	public boolean preHandle(HttpServletRequest request, 
+			HttpServletResponse response, Object handler){
+		return true;
+	}
+	
+	public void setDay(String day) {
+		this.day = day;
+	}
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
+	}
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
+	}
+	
+	
+}

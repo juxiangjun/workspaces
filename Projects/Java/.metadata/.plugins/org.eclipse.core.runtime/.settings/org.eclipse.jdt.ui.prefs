@@ -1,0 +1,21 @@
+#Sun Sep 02 01:14:50 CST 2012
+sourceHoverBackgroundColor=250,251,197
+content_assist_proposals_foreground=0,0,0
+spelling_locale_initialized=true
+org.eclipse.jdt.ui.text.templates_migrated=true
+useAnnotationsPrefPage=true
+eclipse.preferences.version=1
+org.eclipse.jface.textfont=1|Monaco|13.0|0|COCOA|1|Monaco;
+tabWidthPropagated=true
+org.eclipse.jdt.ui.editor.tab.width=
+fontPropagated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+proposalOrderMigrated=true
+content_assist_proposals_background=255,255,255
+org.eclipse.jdt.ui.formatterprofiles.version=12
+content_assist_number_of_computers=17
+useQuickDiffPrefPage=true
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="java" deleted\="false" description\="\u6B64\u6A21\u677F\u5E94\u7528\u4E8E\u5728MyBatis\u57FA\u7840\u4E0A\u521B\u5EFA\u7684\u6570\u636E\u5B58\u53D6\u57FA\u7C7B" enabled\="true" name\="dao">package org.tju.ebs.dao;\n\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.tju.ebs.entity.${Type};\nimport org.tju.ebs.entity.${Type}Example;\nimport org.tju.ebs.persistence.AbstractMapper;\nimport org.tju.ebs.persistence.${Type}Mapper;\n\npublic class ${Type}DAO extends AbstractDAO&lt;${Type}, ${Type}Example&gt; {\n\n\t@Autowired\n\tprivate ${Type}Mapper mapper;\n\t\n\t@Override\n\tprotected AbstractMapper&lt;${Type}, ${Type}Example&gt; getMapper() {\n\t\treturn this.mapper;\n\t}\n\n}\n</template></templates>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"/>
+org.eclipse.jdt.ui.text.code_templates_migrated=true

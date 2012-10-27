@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	classpath:/org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+	">
+	
+	<bean id="Memcached" class="org.tju.ebs.domain.manager.Memcached"></bean>
+	
+	<bean id="AddressManager" class="org.tju.ebs.domain.manager.AddressManager">
+		<property name="addressDAO" ref="AddressDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>
+	
+	<bean id="ModelTransactionManager" class="org.tju.ebs.domain.manager.ModelTransactionManager">
+		<property name="modelTransactionDAO" ref="ModelTransactionDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>
+	
+	<bean id="OrgBankManager" class="org.tju.ebs.domain.manager.OrgBankManager">
+		<property name="orgBankDAO" ref="OrgBankDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>
+	
+	<bean id="OrgCompanyAddressManager" class="org.tju.ebs.domain.manager.OrgCompanyAddressManager">
+		<property name="orgCompanyAddressDAO" ref="OrgCompanyAddressDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>
+	
+	<bean id="OrgCompanyManager" class="org.tju.ebs.domain.manager.OrgCompanyManager">
+		<property name="mc" ref="Memcached"></property>
+		<property name="orgCompanyDAO" ref="OrgCompanyDAO"></property>
+	</bean>
+
+	<bean id="OrgCompanyModelManager" class="org.tju.ebs.domain.manager.OrgCompanyModelManager">
+		<property name="orgCompanyModelDAO" ref="OrgCompanyModelDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>
+		
+	<bean id="OrgDepartmentManager" class="org.tju.ebs.domain.manager.OrgDepartmentManager">
+		<property name="orgDepartmentDAO" ref="OrgDepartmentDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	<bean id="OrgEmployeeDepartmentManager" class="org.tju.ebs.domain.manager.OrgEmployeeDepartmentManager">
+		<property name="orgEmployeeDepartmentDAO" ref="OrgEmployeeDepartmentDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	<bean id="OrgEmployeeManager" class="org.tju.ebs.domain.manager.OrgEmployeeManager">
+		<property name="orgEmployeeDAO" ref="OrgEmployeeDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>
+		
+	<bean id="OrgEmployeeOccupationManager" class="org.tju.ebs.domain.manager.OrgEmployeeOccupationManager">
+		<property name="orgEmployeeOccupationDAO" ref="OrgEmployeeOccupationDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	<bean id="OrgEmployeePositionManager" class="org.tju.ebs.domain.manager.OrgEmployeePositionManager">
+		<property name="orgEmployeePositionDAO" ref="OrgEmployeePositionDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	<bean id="OrgOccupationManager" class="org.tju.ebs.domain.manager.OrgOccupationManager">
+		<property name="orgOccupationDAO" ref="OrgOccupationDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	<bean id="OrgPersonManager" class="org.tju.ebs.domain.manager.OrgPersonManager">
+		<property name="orgPersonDAO" ref="OrgPersonDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	<bean id="OrgPositionManager" class="org.tju.ebs.domain.manager.OrgPositionManager">
+		<property name="orgPositionDAO" ref="OrgPositionDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	<!-- P -->
+	<bean id="ProdBrandManager" class="org.tju.ebs.domain.manager.ProdBrandManager">
+		<property name="prodBrandDAO" ref="ProdBrandDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	<bean id="ProdItemManager" class="org.tju.ebs.domain.manager.ProdItemManager">
+		<property name="prodItemDAO" ref="ProdItemDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	<bean id="ProdCategoryManager" class="org.tju.ebs.domain.manager.ProdCategoryManager">
+		<property name="prodCategoryDAO" ref="ProdCategoryDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	<bean id="ProdPropertyManager" class="org.tju.ebs.domain.manager.ProdPropertyManager">
+		<property name="prodPropertyDAO" ref="ProdPropertyDAO"></property>
+		<property name="prodPropertyValueDAO" ref="ProdPropertyValueDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	<bean id="ProdPackageManager" class="org.tju.ebs.domain.manager.ProdPackageManager">
+		<property name="prodPackageDAO" ref="ProdPackageDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	
+	<bean id="SysCityManager" class="org.tju.ebs.domain.manager.SysCityManager">
+		<property name="sysCityDAO" ref="SysCityDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	<bean id="SysCountryManager" class="org.tju.ebs.domain.manager.SysCountryManager">
+		<property name="sysCountryDAO" ref="SysCountryDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>
+	
+	<bean id="SysCurrencyManager" class="org.tju.ebs.domain.manager.SysCurrencyManager">
+		<property name="sysCurrencyDAO" ref="SysCurrencyDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	<bean id="SysGroupManager" class="org.tju.ebs.domain.manager.SysGroupManager">
+		<property name="sysGroupDAO" ref="SysGroupDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>
+	
+	<bean id="SysGroupMenuManager" class="org.tju.ebs.domain.manager.SysGroupMenuManager">
+		<property name="sysGroupMenuDAO" ref="SysGroupMenuDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>
+	
+	<bean id="SysGroupUserManager" class="org.tju.ebs.domain.manager.SysGroupUserManager">
+		<property name="sysGroupUserDAO" ref="SysGroupUserDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>
+	
+	<bean id="SysMenuManager" class="org.tju.ebs.domain.manager.SysMenuManager">
+		<property name="sysMenuDAO" ref="SysMenuDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>
+	
+	<bean id="SysModelManager" class="org.tju.ebs.domain.manager.SysModelManager">
+		<property name="sysModelDAO" ref="SysModelDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	<bean id="SysObjectManager" class="org.tju.ebs.domain.manager.SysObjectManager">
+		<property name="sysObjectDAO" ref="SysObjectDAO"></property>
+		<property name="sysObjectPropertyDAO" ref="SysObjectPropertyDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	<bean id="SysParamManager" class="org.tju.ebs.domain.manager.SysParamManager">
+		<property name="sysParamDAO" ref="SysParamDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>	
+	
+	<bean id="SysRegistrationManager" class="org.tju.ebs.domain.manager.SysRegistrationManager">
+		<property name="sysRegistrationDAO" ref="SysRegistrationDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>
+	<bean id="SysUserManager" class="org.tju.ebs.domain.manager.SysUserManager">
+		<property name="sysUserDAO" ref="SysUserDAO"></property>
+		<property name="mc" ref="Memcached"></property>
+	</bean>
+
+</beans>

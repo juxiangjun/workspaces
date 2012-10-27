@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+        <Button
+            android:id="@+id/btnTcp"
+            android:tag="btnTcp"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tcp" />
+        
+        <Button
+            android:id="@+id/btnUdp"
+            android:tag="btnUdp"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:text="@string/udp" />
+        
+        <Button
+	        android:id="@+id/btnGps"
+	        android:tag="btnGps"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/gps" />
+        
+        <Button
+	        android:id="@+id/btnCamera"
+	        android:tag="btnCamera"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/camera" />
+        
+        <Button
+	        android:id="@+id/btnWifi"
+	        android:tag="btnWifi"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/wifi" />
+        
+        <Button
+	        android:id="@+id/btnNotifications"
+	        android:tag="btnNotifications"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/notifications" />
+  
+</LinearLayout>
