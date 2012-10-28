@@ -31,9 +31,12 @@ class PageInfoParser(HTMLParser):
 		tag = "/".join(self._level_stack);
 		if tag in PageInfoParser.data_list_tags:
 			html_data = ''	
+			data = data.strip().replace('\r\n','')
 			if len(data.strip())>0:
 				html_data = ''
 				for item in data:
-					html_data = html_data + item.strip().replace('\r\n','')
+					item = item.replace('\n','')
+					item = item.replace('\r','')
+					html_data = html_data + item 
 			html_data = html_data.strip()
 			self._lines.append(html_data)

@@ -13,10 +13,11 @@ class StockHandler:
 	def get_url_list(self):
 		handler = UrlHandler()
 		values = []
-		m = 1
+		m = 0
+		n = 1 
 		for m in xrange(20):
 			value = []
-			value.append(m)
+			value.append(m*50+n)
 			values.append(value)
 			m = m + 1
 		url_list = handler.get_url_list(config, self.node, values)
@@ -32,6 +33,7 @@ class StockHandler:
 			m = m + 1
 			data = fetcher.get(url, int(encode))
 			data = handler.get_soup_data(config, self.node, data)
+			print len(data)
 			for item in data:
 				self.save(stocks, item)		
 		Session.commit()

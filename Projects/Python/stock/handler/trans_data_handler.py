@@ -9,23 +9,23 @@ class TransDataHandler(BaseHandler):
 	node = 'trans_data'
 	
 	def run(self):
-		url_list = self.get_url_list(config)
+		url_list = self.get_url_list(config, self.node)
 		encode = config.get(self.node, 'encode')
 		handler = data_handler
 		seq = int(config.get(self.node, 'seq'))
 		m = 0
 		for url in url_list:
-			if m ==0:
-				data = fetcher.get(url, encode)
-				data = handler.get_soup_data(config, self.node, data)	
-				self.save(self.stocks[m], seq, data)
+			data = fetcher.get(url, encode)
+			data = handler.get_soup_data(config, self.node, data)	
+			self.save(self.stocks[m], seq, data)
 			m = m + 1
 		Session.commit()
-		self.update_seq(seq)	
+		#self.update_seq(seq)	
 
 	def save(self, stock, seq, data):
 		trans_data = TransData(stock, seq, data)
-		dao.add(trans_data)
+		if int(debug[3]):
+			dao.add(trans_data)
 
 	def update_seq(self, seq):
 		seq = seq + 1
@@ -33,5 +33,3 @@ class TransDataHandler(BaseHandler):
 		config.set(self.node, 'seq', seq)
 		config.write(f)
 		f.close()
-		
-		

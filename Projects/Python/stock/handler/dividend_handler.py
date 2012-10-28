@@ -2,12 +2,12 @@
 import uuid
 from env import config, data_handler, fetcher, Session, debug, config_file
 from handler.base_handler import BaseHandler
-from model.profile import Profile 
+from model.dividend import Dividend 
 from dao import trans_data_dao as dao
 
-class ProfileHandler(BaseHandler):
+class DividendHandler(BaseHandler):
 
-	node = 'profile'
+	node = 'dividend'
 	
 	def run(self):
 		url_list = self.get_url_list(config, self.node)
@@ -22,6 +22,7 @@ class ProfileHandler(BaseHandler):
 		Session.commit()
 
 	def save(self, stock, data):
-		profile = Profile(stock, data)
 		if int(debug[3]):
-			dao.add(profile)
+			for record in data:
+				dividend = Dividend(stock, record)
+				dao.add(dividend)
