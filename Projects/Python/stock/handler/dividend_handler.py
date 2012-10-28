@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 import uuid
-from env import config, data_handler, fetcher, Session, debug, config_file
+from env import config, data_handler, domain, Session, debug, config_file
 from handler.base_handler import BaseHandler
+from utils.web_fetcher import WebFetcher
 from model.dividend import Dividend 
-from dao import trans_data_dao as dao
+from dao import dividend_dao as dao
 
 class DividendHandler(BaseHandler):
 

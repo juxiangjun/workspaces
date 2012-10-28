@@ -9,7 +9,10 @@ class PageInfoParser(HTMLParser):
 		PageInfoParser.data_list_tags = data_list_tags 
 	
 	def read(self, data):
-		#data = data.replace('','')
+		data = data.replace('&nbsp','')
+		data = data.replace('\n', '')
+		data = data.replace('<br>','')
+		data = data.strip()
 		self._lines = []
 		self.reset()
 		self.feed(data)

@@ -1,9 +1,10 @@
 #!/usr/bin/env python
-import uuid
-from env import config, data_handler, fetcher, Session, debug, config_file
+import uuid, time
+from env import config, data_handler,  domain, Session, debug, config_file
 from handler.base_handler import BaseHandler
 from model.profile import Profile 
-from dao import trans_data_dao as dao
+from utils.web_fetcher import WebFetcher
+from dao import profile_dao as dao
 
 class ProfileHandler(BaseHandler):
 
@@ -13,12 +14,21 @@ class ProfileHandler(BaseHandler):
 		url_list = self.get_url_list(config, self.node)
 		encode = config.get(self.node, 'encode')
 		handler = data_handler
+		fetcher = WebFetcher(domain)
 		m = 0
 		for url in url_list:
-			data = fetcher.get(url, encode)
-			data = handler.get_soup_data(config, self.node, data)	
-			self.save(self.stocks[m], data)
+			if m !=0 and  m % 100 == 0:
+				fetcher.close()
+				print 'close current connection and re-connnect to server now.'
+				#time.sleep(10)
+				fetcher = WebFetcher(domain)
+			if m==0:
+				data = fetcher.get(url, encode)
+				data = data.replace('<br>','')
+				record = handler.get_soup_data(config, self.node, data)	
+				#self.save(self.stocks[m], record)
 			m = m + 1
+		
 		Session.commit()
 
 	def save(self, stock, data):

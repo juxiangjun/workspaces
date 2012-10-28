@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 import uuid
-from env import config, data_handler, fetcher, Session, debug, config_file
+from env import config, data_handler, domain, Session, debug, config_file
 from handler.base_handler import BaseHandler
+from utils.web_fetcher import WebFetcher
 from model.trans_data import TransData 
 from dao import trans_data_dao as dao
 
@@ -13,6 +14,7 @@ class TransDataHandler(BaseHandler):
 		encode = config.get(self.node, 'encode')
 		handler = data_handler
 		seq = int(config.get(self.node, 'seq'))
+		fetcher = WebFetcher(domain)
 		m = 0
 		for url in url_list:
 			data = fetcher.get(url, encode)

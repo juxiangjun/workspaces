@@ -13,7 +13,6 @@ skipped_errors = int(config.get('app', 'skipped_errors'))
 debug = config.get('app', 'debug').split(',')
 # web fetcher
 domain = config.get('app', 'domain')
-fetcher = WebFetcher(domain)
 # data handler
 data_handler = DataHandler(debug)
 

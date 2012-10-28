@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 import uuid
-from env import config, data_handler, fetcher, Session, debug
+from env import config, data_handler, domain, Session, debug
 from utils.app_util import encode
 from handler.url_handler import UrlHandler
+from utils.web_fetcher import WebFetcher
 from model.stock import Stock
 from dao import stock_dao as dao 
 
@@ -28,6 +29,7 @@ class StockHandler:
 		handler = data_handler
 		stocks = dao.get_stock_list()
 		encode = config.get(self.node, 'encode')
+		fetcher = WebFetcher(domain)
 		m = 0
 		for url in url_list:
 			m = m + 1
