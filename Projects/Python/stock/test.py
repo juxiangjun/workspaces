@@ -2,6 +2,7 @@
 from bs4 import BeautifulSoup
 if __name__ == '__main__':
 	soup = BeautifulSoup(open('a.html'))
-	print soup.prettify()
+	m = 0
 	for td in soup.find_all('td'):
-		print td.get_text().replace('\n','')
+		if td.find('table') is None:
+			print td.get_text()

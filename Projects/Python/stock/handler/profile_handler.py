@@ -22,11 +22,9 @@ class ProfileHandler(BaseHandler):
 				print 'close current connection and re-connnect to server now.'
 				#time.sleep(10)
 				fetcher = WebFetcher(domain)
-			if m==0:
-				data = fetcher.get(url, encode)
-				data = data.replace('<br>','')
-				record = handler.get_soup_data(config, self.node, data)	
-				#self.save(self.stocks[m], record)
+			data = fetcher.get(url, encode)
+			record = handler.get_soup_data(config, self.node, data)	
+			self.save(self.stocks[m], record)
 			m = m + 1
 		
 		Session.commit()

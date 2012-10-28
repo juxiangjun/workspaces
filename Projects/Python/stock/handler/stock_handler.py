@@ -35,7 +35,6 @@ class StockHandler:
 			m = m + 1
 			data = fetcher.get(url, int(encode))
 			data = handler.get_soup_data(config, self.node, data)
-			print len(data)
 			for item in data:
 				self.save(stocks, item)		
 		Session.commit()

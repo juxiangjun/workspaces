@@ -16,13 +16,7 @@ class DataHandler:
 
 	def get_html_data(self, config, node, data, multi):
 		# get settings.
-		selected_tags = config.get(node, 'selected_tags').strip().split(',')
-		data_list_tags = config.get(node, 'data_list_tags').strip().split(',')
 		data_index = config.get(node, 'data_index').strip().split(',')
-		# parser html data.
-		parser = PageInfoParser(selected_tags, data_list_tags)
-		data = parser.read(data)
-		# refine the data user selected
 		start_index = int(config.get(node, 'start_index'))
 		tmp = []
 		m = 1
@@ -96,11 +90,26 @@ class DataHandler:
 
 		length = len(data)
 		tmp = []
+		include_tag = config.get(node, 'include_tag')
+		exclude_tag = config.get(node, 'exclude_tag')
 		for index in soup_index:
 			index = int(index)
 			if index < length:
 				item = data[index].prettify()
-				tmp.append(item)			
+				n = 0
+				for td in data[index].find_all(include_tag):
+					get_text = True
+					if len(exclude_tag.strip())>0:
+						if td.find(exclude_tag) is not None:
+							get_text = False
+
+					if get_text:
+						n = n + 1
+						text = td.get_text()
+						value = ''
+						for line in text:
+							value = value + line.strip().replace('\n','') 
+						tmp.append(value)			
 		data = tmp
 
 		if int(self.debug[0]):
@@ -110,8 +119,5 @@ class DataHandler:
 
 	def parser(self, config, node, data):
 		multi = int(config.get(node, 'multi'))
-		records = []
-		for item in data:
-			tmp = self.get_html_data(config, node, item, multi)
-			records = records + tmp
-		return records			
+		tmp = self.get_html_data(config, node, data, multi)
+		return tmp

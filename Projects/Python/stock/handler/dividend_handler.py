@@ -14,6 +14,7 @@ class DividendHandler(BaseHandler):
 		url_list = self.get_url_list(config, self.node)
 		encode = config.get(self.node, 'encode')
 		handler = data_handler
+		fetcher = WebFetcher(domain)
 		m = 0
 		for url in url_list:
 			data = fetcher.get(url, encode)

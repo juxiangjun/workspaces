@@ -7,9 +7,9 @@ from handler.dividend_handler import DividendHandler
 class Main:
 	def run(self):
 		#self.get_stocks()
-		self.get_profiles()
+		#self.get_profiles()
 		#self.get_trans_data()
-		#self.get_dividend()
+		self.get_dividend()
 
 	def get_stocks(self):
 		handler = StockHandler()
