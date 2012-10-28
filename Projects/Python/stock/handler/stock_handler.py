@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import uuid
-from env import app_config, data_handler, fetcher, Session, debug
+from env import config, data_handler, fetcher, Session, debug
 from utils.app_util import encode
 from handler.url_handler import UrlHandler
 from model.stock import Stock
@@ -8,7 +8,6 @@ from dao import stock_dao as dao
 
 class StockHandler:
 
-	config = app_config
 	node = 'stock'
 
 	def get_url_list(self):
@@ -20,20 +19,19 @@ class StockHandler:
 			value.append(m)
 			values.append(value)
 			m = m + 1
-		url_list = handler.get_url_list(self.config, self.node, values)
+		url_list = handler.get_url_list(config, self.node, values)
 		return url_list
 
 	def run(self):
 		url_list = self.get_url_list()
 		handler = data_handler
-		config = app_config
 		stocks = dao.get_stock_list()
-		encode = self.config.get(self.node, 'encode')
+		encode = config.get(self.node, 'encode')
 		m = 0
 		for url in url_list:
 			m = m + 1
 			data = fetcher.get(url, int(encode))
-			data = handler.get_soup_data(self.config, self.node, data)
+			data = handler.get_soup_data(config, self.node, data)
 			for item in data:
 				self.save(stocks, item)		
 		Session.commit()
