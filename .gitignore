@@ -1,0 +1,9 @@
+*
+!README
+!.gitignore
+!data/
+!log/
+!Library/
+!Links/
+!Servers/
+!.pyc
