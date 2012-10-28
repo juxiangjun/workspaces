@@ -9,7 +9,7 @@ from dao import stock_dao as dao
 class StockHandler:
 
 	config = app_config
-	node = 'index'
+	node = 'stock'
 
 	def get_url_list(self):
 		handler = UrlHandler()
@@ -23,15 +23,12 @@ class StockHandler:
 		url_list = handler.get_url_list(self.config, self.node, values)
 		return url_list
 
-	def get_stocks(self):
-		return dao.get_stock_list()
-
 	def run(self):
 		url_list = self.get_url_list()
 		handler = data_handler
 		config = app_config
+		stocks = dao.get_stock_list()
 		encode = self.config.get(self.node, 'encode')
-		stocks = self.get_stocks()
 		m = 0
 		for url in url_list:
 			m = m + 1

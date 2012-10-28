@@ -31,7 +31,6 @@ class DataHandler:
 				tmp.append(item)
 			m = m + 1
 		data = tmp
-
 		if multi:
 			field_count = int(config.get(node, 'field_count'))
 			data = self.get_collections(data, field_count, data_index)

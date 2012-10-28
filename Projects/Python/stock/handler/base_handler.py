@@ -7,12 +7,12 @@ class BaseHandler:
 		self.stocks = dao.get_stock_list()
 		self.url_handler = UrlHandler()
 
-	def get_url_list(self, config):
+	def get_url_list(self, config, node):
 		values = []
 		for stock in self.stocks:
 			value = []
 			value.append(stock.code)
 			values.append(value)
-		url_list = self.url_handler.get_url_list(config, self.node, values)
+		url_list = self.url_handler.get_url_list(config, node, values)
 		return url_list
 
