@@ -23,7 +23,7 @@ class TransData(Base):
 	current = Column(Float)
 	qty = Column(Float)
 	total = Column(Float)
-	ratio  = Column(Float)
+	price_ratio  = Column(Float)
 	trans_date = Column(String)
 	seq = Column(Integer)
 	status = Column(String)
@@ -43,7 +43,7 @@ class TransData(Base):
 		self.current = get_data(data[4]) 
 		self.qty = get_data(data[5]) 
 		self.total = get_data(data[6]) 
-		self.ratio = get_data(data[7]) 
+		self.price_ratio = get_data(data[7]) 
 
 		if self.current is None:
 			self.status = '0'

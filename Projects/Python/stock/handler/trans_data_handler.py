@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import uuid
+import uuid, time
 from env import config, data_handler, domain, Session, debug, config_file
 from handler.base_handler import BaseHandler
 from utils.web_fetcher import WebFetcher
@@ -16,22 +16,32 @@ class TransDataHandler(BaseHandler):
 		seq = int(config.get(self.node, 'seq'))
 		fetcher = WebFetcher(domain)
 		m = 0
-		for url in url_list:
-			data = fetcher.get(url, encode)
-			data = handler.get_soup_data(config, self.node, data)	
-			self.save(self.stocks[m], seq, data)
-			m = m + 1
-		Session.commit()
-		#self.update_seq(seq)	
+		current = int(config.get(self.node, 'current'))
+		try:
+			for url in url_list:
+				if m > current:
+					print m+1
+					data = fetcher.get(url, encode)
+					data = handler.get_soup_data(config, self.node, data)	
+					self.save(self.stocks[m], seq, data)
+				m = m + 1
+
+			self.set_config('current', '-1')
+			self.set_config('seq', str(seq+1))
+		except:
+			self.set_current('current', str(m-1))
+			raise
+		finally:
+			Session.commit()
+	
+
+	def set_config(self, sub_node, m):
+		f = open(config_file, 'w')
+		config.set(self.node, sub_node, m)
+		config.write(f)
+		f.close()
 
 	def save(self, stock, seq, data):
 		trans_data = TransData(stock, seq, data)
 		if int(debug[3]):
 			dao.add(trans_data)
-
-	def update_seq(self, seq):
-		seq = seq + 1
-		f = open(config_file, 'w')
-		config.set(self.node, 'seq', seq)
-		config.write(f)
-		f.close()
