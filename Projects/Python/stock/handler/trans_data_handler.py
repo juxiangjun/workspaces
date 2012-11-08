@@ -29,7 +29,7 @@ class TransDataHandler(BaseHandler):
 			self.set_config('current', '-1')
 			self.set_config('seq', str(seq+1))
 		except:
-			self.set_current('current', str(m-1))
+			self.set_config('current', str(m-1))
 			raise
 		finally:
 			Session.commit()
