@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>融资服务_中国资金网</title>
+<meta name="keywords" content="融资，贷款,银行，担保，上海贷款，创业贷款，无抵押贷款，担保贷款,风险投资"/>
+<meta name="description" content="融资、贷款就上中国资金网!中国资金网在金融服务领域深耕多年，拥有丰富的经验和资源，与国内外多家银行及金融机构建立长期稳定的合作关系，可以为企业及个人提供各种类型的融资服务。"/>
+<link rel="stylesheet" href="http://www.zj198.com/css/public.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://www.zj198.com/css/module.css" type="text/css" media="screen, projection" />
+
+<script type="text/javascript" src="http://www.zj198.com/script/jquery-1.7.2.min.js" ></script>
+
+<script type="text/javascript" src="http://www.zj198.com/script/partner/chinaccm.js"></script>
+<script type="text/javascript" src="http://www.zj198.com/script/partner/hot-product.js"></script>
+<script language="javascript">    
+$(function(){
+    $('.defaultvalue').each(function(){   
+        $(this).data( "txt", $.trim($(this).val()) );   
+    }).focus(function(){   
+        if ( $.trim($(this).val()) === $(this).data("txt") ) {   
+            $(this).val("");   
+        }   
+    }).blur(function(){      
+        if ( $.trim($(this).val()) === "") {   
+            $(this).val( $(this).data("txt") );   
+        }   
+    }); 
+});    
+function CompanySubmit(){
+	var amount1 = $('#searchForm1 input[name=financeAmount]').val();
+	var date1 = $('#searchForm1 input[name=financeDate]').val();
+	if(amount1=="不限"){
+		 $('#searchForm1 input[name=financeAmount]').val("");
+	}
+	if(date1==null || date1==""){
+		$("#erro").html("请输入期限");
+		return false;
+	}
+	if(amount1!="不限"&&amount1!=""){
+		if(!((/^(\+|-)?\d+$/.test(amount1)) || amount1<0)){
+			$("#erro").html("金额必须输入整数");
+			return false;
+		}
+	}
+	if(!((/^(\+|-)?\d+$/.test(date1)) || date1<0)){
+		$("#erro").html("期限必须输入整数");
+		return false;
+	}
+	$('#reference_id').val(referenceId);
+	$('#searchForm1').submit();
+}
+
+function hrefClick(url){
+	if(url.indexOf('?') >= 0){
+		url = url + "&referenceId=" + referenceId;
+	}else{
+		url = url + "?referenceId=" + referenceId;
+	}
+	window.open(url);
+}
+</script>
+<style>
+.w_628{width:628px; height:280px; border : #d6d6d6 solid 1px; background: url(http://www.zj198.com/images/tab_bg.jpg) 0 0 no-repeat; position:relative;}
+.box_form dl dd{width:300px;}
+.rzsq_bg1{width:308px; height:109px; background:url('http://www.zj198.com/images/ksqq_bg1.jpg') no-repeat;}
+.rzsq_but{margin-top:55px; margin-left:130px;}
+.c_text{background:#f0f0f0; padding:10px 15px;}
+.c_text h1{font-size:15px; color:#164566; padding-bottom:5px;}
+.bank_box{margin:10px 0;}
+.bank_box td{padding:5px 10px;}
+.search_title{font-size:20px; padding-top:15px; padding-left:20px; color:#164566; font-weight:bolder;}
+</style>
+</head>
+
+<body>
+<!--头部-->
+<!--主体部分-->
+<div class="container_950"><img src="http://www.zj198.com/images/banner_xc.jpg" /></div>
+<div class="hr_10">&nbsp; </div>
+<!--tab-->
+<div class="container_950">
+	<div style="width:630px; height:auto; float:left;">
+        <div class="w_628">
+          <div class="search_title">融资产品搜索</div>
+          <div class="hr_10">&nbsp; </div>
+          <div>
+            <div>
+            <div class="fl" style="width:320px;">
+              <form class="out_box_form" id="searchForm1" action="http://www.zj198.com/loan/financeProduct.act" method="post" target="_blank">
+              <input type="hidden" name="financeType" value="151"/>
+              <input type="hidden" name="referenceId" id="reference_id"/>
+                <dl>
+                  <dd>
+                    <h6 style="width:80px;">用途：</h6>
+					<select name="purposeType" id="purposeType" style="width:195px;">
+						<option value="-1">--不限--</option>
+						<option value="62">购买原材料</option>
+						<option value="63">购买设备</option>
+						<option value="65">建造厂房</option>
+						<option value="67">发放或偿还其它债务</option>
+						<option value="68">其它</option>
+					</select>
+                  </dd>
+                  <dd>
+                    <h6 style="width:80px;">金额：</h6>
+                    <input type=text name="financeAmount" class="input-text defaultvalue" style="width:160px;" value="不限"/>万元
+                  </dd>
+                  <dd>
+                    <h6 style="width:80px;">期限：</h6>
+                    <input type=text name="financeDate" class="input-text defaultvalue" style="width:160px;" value="12"/>个月
+                  </dd>
+                  <dd style="padding-bottom:0;">
+                  	<font style="padding-left: 40px;" color="#97181d" id="erro"></font>
+                  </dd>
+                  
+                <dd style="text-align: center;">
+                  <input type="button" onfocus="this.blur()" onclick="CompanySubmit();" class="btnsub bred" style="width:100px;" value="搜 索" />
+                </dd>                   
+                </dl>
+              </form>
+               </div> 
+                <div class="fr" style="padding-top: 10px;padding-right:24px;"><a href="javascript:hrefClick('http://www.zj198.com/loan/financeProduct!financeSearchDetail.act?financeType=151&financeDate=12');"><img src="http://www.zj198.com/images/img_tab_loan1.png" /></a></div>             
+            </div>      
+          </div>
+        </div>
+		<div class="clear"> &nbsp; </div>                 
+        <div class="hr_10"> &nbsp; </div>
+        <div id="recommendProduct"></div>  
+	</div>
+    <!--中间右边部分-->	
+    <div style="width:310px; float:right;">
+		<div class="box_4 rzsq_bg1">
+			<div class="rzsq_but">
+				<a href="javascript:hrefClick('http://www.zj198.com/loan/LoanRequest.act?loan.applyType=136');"><img src="http://www.zj198.com/images/bule_button.jpg" /></a>
+			</div>		
+		</div>
+        <div class="hr_10"> &nbsp; </div>
+        <div class="c_text">
+            <h1>快速提交融资意向</h1>
+            <p>无需注册，简单填写融资意向，我们及时为您制定融资方案并推荐最适合的融资产品。</p>
+        </div>
+        <div class="hr_10"> &nbsp; </div>    
+	    <div class="grid_350 fr" style="width:310px; overflow:hidden;">
+	      <div class="menu_red white grid_350" >
+	      	<h6>热门融资产品</h6>
+	      </div>
+	      <div class="box_3 " style="padding-left:5px;padding-top:15px;padding-bottom:15px;">             
+            <table class="qyrz-top_table" id="hotFinanceProduct">
+            </table>
+	        </div>
+	    </div>
+        <div class="hr_10"> &nbsp; </div> 
+	    <div class="grid_350 fr" style="width:310px; overflow:hidden;">
+	      <div class="menu_red white grid_350" >
+	      	<h6>合作伙伴</h6>
+	      </div>
+		  <div class="box_3"><img src="http://www.zj198.com/images/bank_links.jpg"  class="center"/></div>
+	    </div>	    
+    </div>
+    <!--中间右边部分-->  
+</div>
+<!--主体部分结束-->
+</body>
+</html>
