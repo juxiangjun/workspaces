@@ -1,0 +1,60 @@
+<chart caption='收入.成本.数量对比图' yAxisName='' bgColor='F7F7F7, E9E9E9' numVDivLines='10' divLineAlpha='30'  labelPadding ='10' yAxisValuesPadding ='10' showValues='1' rotateValues='1' valuePosition='auto' width="1110">
+	<categories>
+		<category label='1' /> 
+		<category label='2' /> 
+		<category label='3' /> 
+		<category label='4' /> 
+		<category label='5' /> 
+		<category label='6' /> 
+		<category label='7' /> 
+		<category label='8' /> 
+		<category label='9' /> 
+		<category label='10' /> 
+		<category label='11' /> 
+		<category label='12' /> 
+	</categories>
+
+	<dataset seriesName='销售收入' color='A66EDD' >
+		<set value='350000' /> 
+		<set value='420000' /> 
+		<set value='310000' /> 
+		<set value='280000' /> 
+		<set value='350000' /> 
+		<set value='300000' /> 
+		<set value='350000' /> 
+		<set value='420000' /> 
+		<set value='310000' /> 
+		<set value='280000' /> 
+		<set value='340000' /> 
+		<set value='300000' /> 
+	</dataset>
+
+	<dataset seriesName='销售成本' color='F6BD0F'>
+		<set value='220000' /> 
+		<set value='250000' /> 
+		<set value='100000' /> 
+		<set value='220000' /> 
+		<set value='170000' /> 
+		<set value='160000' /> 
+		<set value='320000' /> 
+		<set value='250000' /> 
+		<set value='180000' /> 
+		<set value='220000' /> 
+		<set value='170000' /> 
+		<set value='160000' />
+	</dataset>
+	<dataset seriesName='销售数量' color='green'>
+		<set value='13000' /> 
+		<set value='18000' /> 
+		<set value='13000' /> 
+		<set value='60000' /> 
+		<set value='21000' /> 
+		<set value='20000' /> 
+		<set value='13000' /> 
+		<set value='17000' /> 
+		<set value='13000' /> 
+		<set value='16000' /> 
+		<set value='17000' /> 
+		<set value='140000' />
+	</dataset>
+</chart>

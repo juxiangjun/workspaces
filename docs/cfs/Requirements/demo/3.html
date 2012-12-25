@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+#Layer1 {
+	position:absolute;
+	left:0px;
+	top:45px;
+	width:285px;
+	height:329px;
+	z-index:1;
+}
+#Layer2 {
+	position:absolute;
+	left:0px;
+	top:45px;
+	width:285px;
+	height:329px;
+	z-index:2;
+}
+#Layer3 {
+	position:absolute;
+	left:0px;
+	top:45px;
+	width:285px;
+	height:329px;
+	z-index:3;
+}
+#Layer4 {
+	position:absolute;
+	left:0px;
+	top:45px;
+	width:285px;
+	height:329px;
+	z-index:4;
+}
+#Layer5 {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:285px;
+	height:45px;
+	z-index:5;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+-->
+</style>
+<script>
+function show(id){
+ window.clearInterval(dd);
+if(id==1){
+document.getElementById("Layer1").style.visibility ="visible";
+document.getElementById("Layer2").style.visibility ="hidden";
+document.getElementById("Layer3").style.visibility ="hidden";
+document.getElementById("Layer4").style.visibility ="hidden";
+document.getElementById("img1").src="images/a1aa.jpg";
+document.getElementById("img2").src="images/a2.jpg";
+document.getElementById("img3").src="images/a3.jpg";
+document.getElementById("img4").src="images/a4.jpg";
+}
+if(id==2){
+document.getElementById("Layer1").style.visibility ="hidden";
+document.getElementById("Layer2").style.visibility ="visible";
+document.getElementById("Layer3").style.visibility ="hidden";
+document.getElementById("Layer4").style.visibility ="hidden";
+document.getElementById("img1").src="images/a1.jpg";
+document.getElementById("img2").src="images/a22.jpg";
+document.getElementById("img3").src="images/a3.jpg";
+document.getElementById("img4").src="images/a4.jpg";
+}
+if(id==3){
+document.getElementById("Layer1").style.visibility ="hidden";
+document.getElementById("Layer2").style.visibility ="hidden";
+document.getElementById("Layer3").style.visibility ="visible";
+document.getElementById("Layer4").style.visibility ="hidden";
+document.getElementById("img1").src="images/a1.jpg";
+document.getElementById("img2").src="images/a2.jpg";
+document.getElementById("img3").src="images/a33.jpg";
+document.getElementById("img4").src="images/a4.jpg";
+}
+if(id==4){
+document.getElementById("Layer1").style.visibility ="hidden";
+document.getElementById("Layer2").style.visibility ="hidden";
+document.getElementById("Layer3").style.visibility ="hidden";
+document.getElementById("Layer4").style.visibility ="visible";
+document.getElementById("img1").src="images/a1.jpg";
+document.getElementById("img2").src="images/a2.jpg";
+document.getElementById("img3").src="images/a3.jpg";
+document.getElementById("img4").src="images/a44.jpg";
+}
+}
+
+function shows(id){
+
+if(id==1){
+document.getElementById("Layer1").style.visibility ="visible";
+document.getElementById("Layer2").style.visibility ="hidden";
+document.getElementById("Layer3").style.visibility ="hidden";
+document.getElementById("Layer4").style.visibility ="hidden";
+document.getElementById("img1").src="images/a1aa.jpg";
+document.getElementById("img2").src="images/a2.jpg";
+document.getElementById("img3").src="images/a3.jpg";
+document.getElementById("img4").src="images/a4.jpg";
+}
+if(id==2){
+document.getElementById("Layer1").style.visibility ="hidden";
+document.getElementById("Layer2").style.visibility ="visible";
+document.getElementById("Layer3").style.visibility ="hidden";
+document.getElementById("Layer4").style.visibility ="hidden";
+document.getElementById("img1").src="images/a1.jpg";
+document.getElementById("img2").src="images/a22.jpg";
+document.getElementById("img3").src="images/a3.jpg";
+document.getElementById("img4").src="images/a4.jpg";
+}
+if(id==3){
+document.getElementById("Layer1").style.visibility ="hidden";
+document.getElementById("Layer2").style.visibility ="hidden";
+document.getElementById("Layer3").style.visibility ="visible";
+document.getElementById("Layer4").style.visibility ="hidden";
+document.getElementById("img1").src="images/a1.jpg";
+document.getElementById("img2").src="images/a2.jpg";
+document.getElementById("img3").src="images/a33.jpg";
+document.getElementById("img4").src="images/a4.jpg";
+}
+if(id==4){
+document.getElementById("Layer1").style.visibility ="hidden";
+document.getElementById("Layer2").style.visibility ="hidden";
+document.getElementById("Layer3").style.visibility ="hidden";
+document.getElementById("Layer4").style.visibility ="visible";
+document.getElementById("img1").src="images/a1.jpg";
+document.getElementById("img2").src="images/a2.jpg";
+document.getElementById("img3").src="images/a3.jpg";
+document.getElementById("img4").src="images/a44.jpg";
+}
+}
+
+var dd;
+//每10毫秒该值增加1
+var seed=1; 
+
+function star(){
+
+              //设置定时器，每5s跳一次
+              dd=window.setInterval(tip,5000);
+
+}
+function tip(){
+shows(seed);
+seed++;
+if(seed>4){
+seed=1;
+}
+}
+
+</script>
+</head>
+
+<body onload="star();">
+<div id="Layer1"><img src="images/001_01.jpg" width="285" height="329" border="0" usemap="#Map3" />
+<map name="Map3" id="Map3"><area shape="rect" coords="38,4,234,26" href="zhongjian.html" target="_parent" /></map>
+<map name="Map" id="Map"><area shape="rect" coords="42,4,216,20" href="zhongjian2.html" target="_parent" />  
+</map></div>
+<div id="Layer2"><img src="images/002_01.jpg" width="285" height="329" /><map name="Map" id="Map"><area shape="rect" coords="42,4,216,20" href="zhongjian2.html" target="_parent" />
+</map></div>
+<div id="Layer3"><img src="images/003_01_01.jpg" width="285" height="329" border="0" usemap="#Map2" /><area shape="rect" coords="42,4,216,20" href="zhongjian2.html" target="_parent" />
+<map name="Map2" id="Map2">
+</map></div>
+<div id="Layer4"><img src="images/004_01_01.jpg" width="285" height="329" border="0" usemap="#Map" />
+<map name="Map" id="Map"><area shape="rect" coords="42,7,216,21" href="zhongjian.html" target="_parent" />
+</map></div>
+<div id="Layer5"><a href="javascript:show(1);" onfocus="this.blur();"><img src="images/a1.jpg" border="0"  width="75" height="45" id="img1" /></a><a href="javascript:show(2);" onFocus="this.blur();"><img src="images/a2.jpg" name="img2"width="68" height="45"  border="0" id="img2" /></a><a href="javascript:show(3);" onFocus="this.blur();"><img src="images/a3.jpg" name="img3" width="68" height="45" border="0" id="img3" /></a><a href="javascript:show(4);" onFocus="this.blur();" ><img src="images/a4.jpg" name="img4" width="68" height="45" border="0" id="img4" /></a><img src="js/pp.jpg" width="6" height="45" /></div>
+</body>
+</html>

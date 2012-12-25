@@ -1,0 +1,110 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"><style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style></head>
+<body>
+<table width="1033"  height="333" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<object width="1033" height="333" id="MSColumn2D" 
+            classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" 
+            codebase="http://fpdownload.macromedia.com/pub/
+              shockwave/cabs/flash/swflash.cab#version=8,0,0,0" >
+
+         <param name="movie" value="FusionCharts1/MSColumn2D.swf" />
+         <param name="FlashVars" value="&chartWidth=800&chartHeight=600
+                    &DOMId=myChartId&isterWithJS=1&debugMode=0
+                   &dataXML=
+                   <chart palette='2' rotateNames='0' animation='1' 
+numdivlines='4' caption='预警信息表' baseFont='Arial' baseFontSize='12' useRoundEdges='1' legendBorderAlpha='0'>
+	<categories font='Arial' fontSize='12'>
+
+                        	<category label='逃废债' toolText='金额'/>
+                        	<category label='资金流动过大' toolText='金额'/>
+                        	<category label='未按时还贷' toolText='金额'/>
+                        	<category label='预警信息' toolText='金额'/>
+                        	<category label='预警信息' toolText='金额'/>
+                        	<category label='预警信息' toolText='金额'/>
+                        	<category label='预警信息' toolText='金额'/>
+                        	<category label='预警信息' toolText='金额'/>
+                        	<category label='预警信息' toolText='金额'/>
+							</categories>
+	<dataset seriesname='预警信息统计' color='9ACCF6' alpha='90' showValues='0' dashed='1'>
+
+	                        	  <set label='sss' value='50' link='ckyj.html' />
+	 							<set label='sss' value='150' /> 
+	 							<set label='sss' value='30' /> 
+								 <set label='sss' value='60' />
+	 							 <set label='sss' value='50' />
+	 							   <set label='sss' value='50' />
+	 							<set label='sss' value='79' /> 
+	 							<set label='sss' value='120' /> 
+								 <set label='sss' value='110' />
+
+	</dataset><trendLines>
+		<line startValue='20' endValue='35' color='8BBA00' thickness='1' alpha='20' showOnTop='0' displayValue='走向' isTrendZone='1'/>		
+	</trendLines>
+<styles>
+        <definition>
+            <style name='Anim1' type='animation' param='_xScale' start='0' duration='1' />
+            <style name='Anim2' type='animation' param='_alpha' start='0' duration='1' />
+			<style name='myCaptionFont' type='font' align='left'/>
+        </definition>
+        <application>
+            <apply toObject='TRENDLINES' styles='Anim1, Anim2' />
+			<apply toObject='Caption' styles='myCaptionFont' />
+        </application>
+    </styles>
+
+</chart>
+width="800" height="600" name="Pie2D" 
+              quality="high" 
+              type="application/x-shockwave-flash" 
+              pluginspage="http://www.macromedia.com/go/getflashplayer" />
+              
+  <param name="quality" value="high" />
+         <embed src="FusionCharts1/MSColumn2D.swf" FlashVars="&chartWidth=800&chartHeight=600
+                    &DOMId=myChartId&isterWithJS=1&debugMode=0
+                   &dataXML=
+                   <chart palette='2' rotateNames='0' animation='1' 
+numdivlines='4' caption='菜系成本利润对比表' baseFont='Arial' baseFontSize='12' useRoundEdges='1' legendBorderAlpha='0'>
+	<categories font='Arial' fontSize='12'>
+	<logic:iterate id="i property="foodtieMonth">
+                        		<category label='${i.salesName}' toolText='金额'/>
+                        	  </logic:iterate>
+		
+	</categories>
+	<dataset seriesname='成本价格' color='9ACCF6' alpha='90' showValues='0' dashed='1'>
+		<logic:iterate id="i" name="smodel" property="foodtieMonth">
+                        		
+                        	  <set label='${i.salesName}' value='${i.money }' />
+       	    </logic:iterate>
+
+	</dataset>
+	
+	<dataset seriesname='销售金额' color='82CF27'  showValues='0' alpha='90'>
+		<logic:iterate id="i" name="smodel" property="foodtieMonth">
+                        		
+                        	  <set label='${i.salesName}' value='${i.salesMoney }' />
+       	    </logic:iterate>
+	</dataset>
+
+
+	<trendLines>
+		<line startValue='20' endValue='35' color='8BBA00' thickness='1' alpha='20' showOnTop='0' displayValue='走向' isTrendZone='1'/>		
+	</trendLines>
+</chart>
+</object>
+</td>
+</tr>
+</table>
+</body>
+</html>

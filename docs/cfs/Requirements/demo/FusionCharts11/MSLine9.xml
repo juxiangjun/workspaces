@@ -1,0 +1,61 @@
+<chart caption='销售量算术平均数统计图' yAxisName='' bgColor='F7F7F7, E9E9E9' numVDivLines='10' divLineAlpha='30'  labelPadding ='10' yAxisValuesPadding ='10' showValues='1' rotateValues='1' valuePosition='auto' width="1120">
+	<categories>
+		<category label='1' /> 
+		<category label='2' /> 
+		<category label='3' /> 
+		<category label='4' /> 
+		<category label='5' /> 
+		<category label='6' /> 
+		<category label='7' /> 
+		<category label='8' /> 
+		<category label='9' /> 
+		<category label='10' /> 
+		<category label='11' /> 
+		<category label='12' /> 
+	</categories>
+
+	<dataset seriesName='哈尔滨金昌隆科技开发有限公司' color='A66EDD' >
+		<set value='5400' /> 
+		<set value='3200' /> 
+		<set value='3000' /> 
+		<set value='3500' /> 
+		<set value='4000' /> 
+		<set value='2000' /> 
+		<set value='3000' /> 
+		<set value='3500' /> 
+		<set value='3100' /> 
+		<set value='3300' /> 
+		<set value='3000' /> 
+		<set value='3100' /> 
+	</dataset>
+
+	<dataset seriesName='中信兴业房地产估价有限公司' color='F6BD0F'>
+		<set value='3200' /> 
+		<set value='1300' /> 
+		<set value='3100' /> 
+		<set value='4000' /> 
+		<set value='4100' /> 
+		<set value='3000' /> 
+		<set value='2000' /> 
+		<set value='2500' /> 
+		<set value='2100' /> 
+		<set value='3500' /> 
+		<set value='4000' /> 
+		<set value='3200' />
+	</dataset>
+
+	<dataset seriesName='上海某公司' color='green'>
+		<set value='5100' /> 
+		<set value='2000' /> 
+		<set value='4500' /> 
+		<set value='5500' /> 
+		<set value='3000' /> 
+		<set value='1000' /> 
+		<set value='1000' /> 
+		<set value='3500' /> 
+		<set value='5100' /> 
+		<set value='3300' /> 
+		<set value='2000' /> 
+		<set value='5100' />
+	</dataset>
+</chart>

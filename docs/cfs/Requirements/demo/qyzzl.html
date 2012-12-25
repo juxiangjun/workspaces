@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style></head>
+
+<body>
+<table width="1143" height="642" border="0" align="left" cellpadding="0" cellspacing="0">
+
+  <tr>
+    <td width="1143" height="647" align="center" valign="top" background="images/qyzzl0.jpg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="400" align="center"><object width="1110" height="380" 
+            classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" 
+            codebase="http://fpdownload.macromedia.com/pub/
+              shockwave/cabs/flash/swflash.cab#version=8,0,0,0" >
+          <param name="movie" value="FusionCharts11/MSColumn2D.swf" />
+          <param name="FlashVars" value="&chartWidth=800&chartHeight=600
+                    &DOMId=myChartId&isterWithJS=1&debugMode=0
+                   &dataXML=
+                   <chart palette='2' rotateNames='0' animation='1' 
+numdivlines='4' caption='企业增长率(单位:百分比)' baseFont='Arial' baseFontSize='12' useRoundEdges='1' legendBorderAlpha='0'>
+	<categories font='Arial' fontSize='12'>
+                        		<category label='内部资金增长率' toolText='金额'/>
+                        		<category label='外部资金增长率' toolText='金额'/>
+                        		<category label='可持续增长率' toolText='金额'/>
+		
+	</categories>
+	<dataset seriesname='2009' color='9ACCF6' alpha='90' showValues='0' dashed='1'>
+                        		
+                        	  <set label='${i.salesName}' value='20' />
+                        	   <set label='${i.salesName}' value='13' />
+                        	    <set label='${i.salesName}' value='10' />
+
+	</dataset>
+	
+	<dataset seriesname='2010' color='82CF27'  showValues='0' alpha='90'>
+                        		
+                        	    <set label='${i.salesName}' value='12' />
+                        	   <set label='${i.salesName}' value='16' />
+                        	    <set label='${i.salesName}' value='8' />
+	</dataset>
+
+	<trendLines>
+		<line startValue='20' endValue='35' color='8BBA00' thickness='1' alpha='20' showOnTop='0' displayValue='走向' isTrendZone='1'/>		
+	</trendLines>
+<styles>
+        <definition>
+            <style name='Anim1' type='animation' param='_xScale' start='0' duration='1' />
+            <style name='Anim2' type='animation' param='_alpha' start='0' duration='1' />
+			<style name='myCaptionFont' type='font' align='left'/>
+        </definition>
+        <application>
+            <apply toObject='TRENDLINES' styles='Anim1, Anim2' />
+			<apply toObject='Caption' styles='myCaptionFont' />
+        </application>
+    </styles>
+
+</chart>"
+width="800" height="600" name="Pie2D" 
+              quality="high" 
+              type="application/x-shockwave-flash" 
+              pluginspage="http://www.macromedia.com/go/getflashplayer" />
+          <param name="quality" value="high" />
+          <embed src="FusionCharts/MSColumn2D.swf" width="1110" height="380" FlashVars="&chartWidth=800&chartHeight=600
+                    &DOMId=myChartId&isterWithJS=1&debugMode=0
+                   &dataXML=
+                   <chart palette='2' rotateNames='0' animation='1' 
+numdivlines='4' caption='菜系成本利润对比表' baseFont='Arial' baseFontSize='12' useRoundEdges='1' legendBorderAlpha='0'>
+	<categories font='Arial' fontSize='12'>
+	<logic:iterate id="i="i" property="foodtieMonth">
+            <category label='${i.salesName}' toolText='金额'/>
+            </logic:iterate>
+            </categories>
+            <dataset seriesname='成本价格' color='9ACCF6' alpha='90' showValues='0' dashed='1'>
+              <logic:iterate id="i" name="smodel" property="foodtieMonth">
+                <set label='${i.salesName}' value='${i.money }' />
+              </logic:iterate>
+            </dataset>
+            <dataset seriesname='销售金额' color='82CF27'  showValues='0' alpha='90'>
+              <logic:iterate id="i" name="smodel" property="foodtieMonth">
+                <set label='${i.salesName}' value='${i.salesMoney }' />
+              </logic:iterate>
+            </dataset>
+            <trendLines>
+              <line startValue='20' endValue='35' color='8BBA00' thickness='1' alpha='20' showOnTop='0' displayValue='走向' isTrendZone='1'/>
+            </trendLines>
+            <styles>
+            <definition>
+          </embed>
+          <style name='Anim1' type='animation' param='_xScale' start='0' duration='1' />
+        </style>
+          <style name='Anim2' type='animation' param='_alpha' start='0' duration='1' />
+        </style>
+          <style name='myCaptionFont' type='font' align='left'/>
+        </style>
+          </definition>
+          <application>
+            <apply toObject='TRENDLINES' styles='Anim1, Anim2' />
+            <apply toObject='Caption' styles='myCaptionFont' />
+          </application>
+          </styles>
+          </chart>
+          &quot;
+          
+          width=&quot;800&quot; height=&quot;600&quot; name=&quot;Pie2D&quot; 
+          quality=&quot;high&quot; 
+          type=&quot;application/x-shockwave-flash&quot; 
+          pluginspage=&quot;http://www.macromedia.com/go/getflashplayer&quot; /&gt;
+        </object></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

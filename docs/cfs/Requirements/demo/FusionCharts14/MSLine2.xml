@@ -1,0 +1,50 @@
+<chart caption='平衡分析（单位：万元）' yAxisName='' bgColor='F7F7F7, E9E9E9' numVDivLines='10' divLineAlpha='30'  labelPadding ='10' yAxisValuesPadding ='10' showValues='1' rotateValues='1' valuePosition='auto' width="2020">
+	<categories>
+		<category label='1t' /> 
+		<category label='2t' /> 
+		<category label='3t' /> 
+		<category label='4t' /> 
+		<category label='5t' /> 
+		<category label='6t' /> 
+		
+	</categories>
+
+	<dataset seriesName='利润' color='A66EDD' >
+		<set value='123003' /> 
+		<set value='232322' /> 
+		<set value='312323' /> 
+		<set value='421212' /> 
+		<set value='509898' /> 
+		<set value='656565' /> 
+		
+	</dataset>
+
+	<dataset seriesName='销售收入' color='F6BD0F'>
+		<set value='132423' /> 
+		<set value='253232' /> 
+		<set value='322123' /> 
+		<set value='454545' /> 
+		<set value='654354' /> 
+		<set value='767677' /> 
+		
+	</dataset>
+
+	<dataset seriesName='固定成本' color='ff5904'>
+		<set value='133333' /> 
+		<set value='133333' /> 
+		<set value='133333' /> 
+		<set value='133333' /> 
+		<set value='133333' /> 
+		<set value='133333' /> 
+		
+	</dataset>
+
+       <dataset seriesName='总成本' color='black'>
+		<set value='144343' /> 
+		<set value='184343' /> 
+		<set value='274343' /> 
+		<set value='365656' /> 
+		<set value='432323' /> 
+		<set value='543232' /> 
+      </dataset>
+</chart>

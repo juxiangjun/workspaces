@@ -1,0 +1,40 @@
+.a {
+	font-family: "宋体";
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	line-height:20px;
+}
+a:link {
+	font-family: "宋体";
+	font-size: 12px;
+	font-weight: normal;
+	color: #069DBD;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	line-height:20px;
+}
+a:visited {
+font-family: "宋体";
+	font-size: 12px;
+	font-weight: normal;
+	color: #069DBD;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	line-height:20px;
+}
+a:hover {
+font-family: "宋体";
+	font-size: 12px;
+	font-weight: normal;
+	color: #069DBD;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	line-height:20px;
+}

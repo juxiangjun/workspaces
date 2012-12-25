@@ -1,0 +1,47 @@
+<chart caption='单价.成本对比图' yAxisName='' bgColor='F7F7F7, E9E9E9' numVDivLines='10' divLineAlpha='30'  labelPadding ='10' yAxisValuesPadding ='10' showValues='1' rotateValues='1' valuePosition='auto' width="1120">
+	<categories>
+		<category label='1' /> 
+		<category label='2' /> 
+		<category label='3' /> 
+		<category label='4' /> 
+		<category label='5' /> 
+		<category label='6' /> 
+		<category label='7' /> 
+		<category label='8' /> 
+		<category label='9' /> 
+		<category label='10' /> 
+		<category label='11' /> 
+		<category label='12' /> 
+	</categories>
+
+	<dataset seriesName='销售单价' color='A66EDD' >
+		<set value='350' /> 
+		<set value='350' /> 
+		<set value='355' /> 
+		<set value='355' /> 
+		<set value='360' /> 
+		<set value='360' /> 
+		<set value='365' /> 
+		<set value='370' /> 
+		<set value='380' /> 
+		<set value='380' /> 
+		<set value='380' /> 
+		<set value='385' /> 
+	</dataset>
+
+	<dataset seriesName='单位成本' color='F6BD0F'>
+		<set value='260' /> 
+		<set value='260' /> 
+		<set value='255' /> 
+		<set value='260' /> 
+		<set value='265' /> 
+		<set value='265' /> 
+		<set value='260' /> 
+		<set value='264' /> 
+		<set value='270' /> 
+		<set value='270' /> 
+		<set value='280' /> 
+		<set value='280' />
+	</dataset>
+	
+</chart>

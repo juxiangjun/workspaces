@@ -1,0 +1,99 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"><style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style></head>
+<body>
+<table width="758"  height="273" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<object width="758" height="273" id="MSColumn2D" 
+            classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" 
+            codebase="http://fpdownload.macromedia.com/pub/
+              shockwave/cabs/flash/swflash.cab#version=8,0,0,0" >
+
+         <param name="movie" value="FusionCharts1/MSColumn2D.swf" />
+         <param name="FlashVars" value="&chartWidth=800&chartHeight=600
+                    &DOMId=myChartId&isterWithJS=1&debugMode=0
+                   &dataXML=
+                   <chart palette='2' rotateNames='0' animation='1' 
+numdivlines='4' caption='企业评分表' baseFont='Arial' baseFontSize='12' useRoundEdges='1' legendBorderAlpha='0'>
+	<categories font='Arial' fontSize='12'>
+
+                        	<category label='银行得分' toolText='金额'/>
+                        	<category label='行业得分' toolText='金额'/>
+                        	<category label='管理人得分' toolText='金额'/>
+                        	<category label='集团性得分' toolText='金额'/>
+                        	<category label='项目得分' toolText='金额'/>
+                        	<category label='综合评分' toolText='金额'/>
+							</categories>
+	<dataset seriesname='企业评分信息统计' color='9ACCF6' alpha='90' showValues='0' dashed='1'>
+
+	                        	  <set label='sss' value='90'  />
+	 							<set label='sss' value='89' /> 
+	 							<set label='sss' value='91' /> 
+								 <set label='sss' value='92' />
+	 							 <set label='sss' value='88' />
+	 							   <set label='sss' value='90' />
+
+	</dataset>
+<styles>
+        <definition>
+            <style name='Anim1' type='animation' param='_xScale' start='0' duration='1' />
+            <style name='Anim2' type='animation' param='_alpha' start='0' duration='1' />
+			<style name='myCaptionFont' type='font' align='left'/>
+        </definition>
+        <application>
+            <apply toObject='TRENDLINES' styles='Anim1, Anim2' />
+			<apply toObject='Caption' styles='myCaptionFont' />
+        </application>
+    </styles>
+
+</chart>
+width="800" height="600" name="Pie2D" 
+              quality="high" 
+              type="application/x-shockwave-flash" 
+              pluginspage="http://www.macromedia.com/go/getflashplayer" />
+              
+  <param name="quality" value="high" />
+         <embed src="FusionCharts1/MSColumn2D.swf" FlashVars="&chartWidth=800&chartHeight=600
+                    &DOMId=myChartId&isterWithJS=1&debugMode=0
+                   &dataXML=
+                   <chart palette='2' rotateNames='0' animation='1' 
+numdivlines='4' caption='菜系成本利润对比表' baseFont='Arial' baseFontSize='12' useRoundEdges='1' legendBorderAlpha='0'>
+	<categories font='Arial' fontSize='12'>
+	<logic:iterate id="i property="foodtieMonth">
+                        		<category label='${i.salesName}' toolText='金额'/>
+                        	  </logic:iterate>
+		
+	</categories>
+	<dataset seriesname='成本价格' color='9ACCF6' alpha='90' showValues='0' dashed='1'>
+		<logic:iterate id="i" name="smodel" property="foodtieMonth">
+                        		
+                        	  <set label='${i.salesName}' value='${i.money }' />
+       	    </logic:iterate>
+
+	</dataset>
+	
+	<dataset seriesname='销售金额' color='82CF27'  showValues='0' alpha='90'>
+		<logic:iterate id="i" name="smodel" property="foodtieMonth">
+                        		
+                        	  <set label='${i.salesName}' value='${i.salesMoney }' />
+       	    </logic:iterate>
+	</dataset>
+
+
+</chart>
+</object>
+</td>
+</tr>
+</table>
+</body>
+</html>
