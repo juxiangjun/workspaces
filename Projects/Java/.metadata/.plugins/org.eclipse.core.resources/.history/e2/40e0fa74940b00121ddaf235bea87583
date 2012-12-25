@@ -1,5 +1,0 @@
-package org.tju.ebs.interceptor;
-
-public interface BaseAdvice {
-
-}

@@ -1,9 +1,0 @@
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
-
-<table border="1" cellpadding="2" cellspacing="2" align="center">
-	<tr>
-		<td height="30" colspan="2">
-		<tiles:insertAttribute name="message_bar" />
-		</td>
-	</tr>
-</table>

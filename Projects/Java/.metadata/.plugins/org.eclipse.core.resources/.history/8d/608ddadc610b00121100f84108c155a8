@@ -1,6 +1,0 @@
-package org.tju.ebs.interceptor;
-
-@Aspect
-public class AutheticationAspect {
-
-}

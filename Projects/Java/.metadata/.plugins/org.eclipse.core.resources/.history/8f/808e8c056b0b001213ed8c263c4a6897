@@ -1,9 +1,0 @@
-package org.tju.ebs.interceptor;
-
-@Aspect
-public class AutheticationAspect {
-
-	public void before(JoinPoint jp){
-		System.out.println(this.getClass().getName()+"::Before");
-	}
-}
