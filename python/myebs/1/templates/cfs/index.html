@@ -1,7 +1,0 @@
-{% for metric in metric_list %}
-	{% if metric.parent_id == '00'%}
-		<b> {{ metric.code }}:{{ metric.name }} </b> <br/>
-	{% else %}
-		{{metric.code}}:	<a href="/cfs/{{metric.id }}/">	{{ metric.name }} </a><br/>
-	{% endif%}
-{% endfor %}
