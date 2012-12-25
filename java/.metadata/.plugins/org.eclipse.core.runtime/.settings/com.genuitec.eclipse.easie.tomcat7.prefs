@@ -1,0 +1,10 @@
+#Mon Oct 01 09:59:28 CST 2012
+TOMCAT_HOME=/Users/tju/Workspaces/Servers/apache-tomcat-7.0.29
+TOMCAT_TEMP=/Users/tju/Workspaces/Servers/apache-tomcat-7.0.29/temp
+LIBRARY_PATH="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bin\:/Users/tju/Workspaces/Servers/apache-tomcat-7.0.29/bin"
+TOMCAT_BASE=/Users/tju/Workspaces/Servers/apache-tomcat-7.0.29
+ENDORSED_DIRS="/Users/tju/Workspaces/Servers/apache-tomcat-7.0.29/common/endorsed"
+eclipse.preferences.version=1
+JDK_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+OPT_VM_ARGS=-Xms64m -Xmx512m
+SERVER_ENABLEMENT=true

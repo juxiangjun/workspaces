@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+#coding: utf-8
+
+from bs4 import BeautifulSoup
+from utils.web_fetcher import WebFetcher
+
+
+class StockService:
+	
+	def get_test_page(self):
+		domain = 'news.sina.com.cn'
+		url = '/c/2012-12-19/020025841912.shtml'
+		fetcher = WebFetcher(domain)
+		return fetcher.get(url)

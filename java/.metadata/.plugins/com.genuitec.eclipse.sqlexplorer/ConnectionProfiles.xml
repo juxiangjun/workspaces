@@ -1,0 +1,18 @@
+<Beans>
+    <Bean Class="com.genuitec.eclipse.sqlexplorer.utils.ConnectionProfile">
+        <activate>false</activate>
+        <driverIdentifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>46d77d86:138e04647e4:-7f95</string>
+        </driverIdentifier>
+        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>46d77d86:138e04647e4:-7fda</string>
+        </identifier>
+        <name>192.168.1.6</name>
+        <password encryption="true">tCwi34Wnx8o=</password>
+        <promptForPassword>false</promptForPassword>
+        <schema Indexed="true"/>
+        <schemaDisplayPolicy>0</schemaDisplayPolicy>
+        <url>jdbc:mysql://192.168.1.6:3306/dev</url>
+        <userName>dev</userName>
+    </Bean>
+</Beans>

@@ -1,0 +1,22 @@
+1349074427315	Rename compilation unit 'BaseAdvice.java'
+1349074736776	Rename type 'BeforeAdvice'
+1349075834304	Rename type 'AutheticationAspect'
+1349075887014	Rename type 'AutheticationAdvice'
+1349100903942	Delete element
+1349103864562	Delete element
+1349104411245	Rename type 'EmailSenderAdvise'
+1349109072360	Rename package 'org.tju.ebs.interceptor'
+1349109102197	Delete element
+1349109110370	Delete element
+1349109121740	Move compilation units
+1349137566751	Delete element
+1349139985892	Move files
+1349140613063	Move folder
+1349149102996	Copy file
+1349150028520	Move files
+1349150037792	Move file
+1349150048658	Move file
+1349171105500	Move file
+1349171286698	Rename resource 'message_bar.jsp'
+1349171434594	Rename resource 'base_layout.jsp'
+1349171808981	Rename resource 'message.jsp'

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommitComments>	<CommitComment>增加了找项目的用户中心主页面，
+完成了发布信息的第一步：信息类型的选择.</CommitComment>
+	<CommitComment>初步实现供求信息中的项目方寻求资金的发布，用户中心的相关数据显示，非注册用户的浏览列表及详细页面功能
+1.查询功能未完成 
+2.用户中心与Form页系祼页面。</CommitComment>
+	<CommitComment>调整新闻　维护　页面的类别显示位置　</CommitComment>
+	<CommitComment>增加了各种类型用户的Home与Edit页面，功能还没有实现.</CommitComment>
+	<CommitComment>俱乐部的数据显示（公共用户）</CommitComment>
+</CommitComments>

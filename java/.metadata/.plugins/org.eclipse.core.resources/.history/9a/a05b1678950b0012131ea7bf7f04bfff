@@ -1,0 +1,5 @@
+package org.tju.ebs.interceptor;
+
+public interface BeforeAdvice extends org.springframework.aop.BeforeAdvice {
+
+}

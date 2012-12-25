@@ -1,0 +1,16 @@
+package org.tju.ebs.interceptor;
+
+import java.lang.reflect.Method;
+
+
+public class AuthenticationAdvice  implements AfterReturningAdvice  {
+
+	
+	@Override
+	public void afterReturning(Object returnValue, Method method,
+			Object[] args, Object target) throws Throwable {
+		// TODO Auto-generated method stub
+		System.out.println("99999");
+	}
+
+}

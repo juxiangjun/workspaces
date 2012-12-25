@@ -1,0 +1,7 @@
+INDEX VERSION 1.122+/Users/tju/Workspaces/Projects/Java/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1858373592.index
+3734642068.index
+180923012.index
+1565828021.index
+164511772.index
+2995180773.index

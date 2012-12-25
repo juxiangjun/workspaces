@@ -1,0 +1,6 @@
+from env import Session 
+from model.user import User
+
+class UserDAO:
+	def add(self, user):
+		Session.add(user)

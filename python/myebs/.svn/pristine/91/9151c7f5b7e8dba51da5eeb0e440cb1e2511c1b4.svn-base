@@ -1,0 +1,17 @@
+# Create your views here.
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+
+from admin.stock.handler.trans_data_handler import TransDataHandler
+from admin.stock.handler.stock_handler import StockHandler
+from stock.handler.profile_handler import ProfileHandler
+from stock.handler.dividend_handler import DividendHandler
+
+
+
+def index(request):
+	return render_to_response(\
+			"admin/index.html",\
+			{},RequestContext(request))
+
+

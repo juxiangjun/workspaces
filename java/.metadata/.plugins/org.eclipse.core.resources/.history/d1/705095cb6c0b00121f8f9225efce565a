@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="org.springframework.samples.jpetstore"
+  id="myeclipse.1349056882945"
+  context-root="/org.springframework.samples.jpetstore"
+  j2ee-spec="5.0"
+  archive="org.springframework.samples.jpetstore.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

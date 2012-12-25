@@ -1,0 +1,30 @@
+package org.tju.ebs.aop.advice;
+
+import java.lang.reflect.Method;
+
+import org.springframework.aop.AfterReturningAdvice;
+import org.springframework.aop.MethodBeforeAdvice;
+import org.tju.ebs.dao.MessageTemplateDAO;
+import org.tju.ebs.entity.Registration;
+import org.tju.ebs.service.AccountService;
+
+public class EmailSenderAdvice implements AfterReturningAdvice, MethodBeforeAdvice {
+
+	private MessageTemplateDAO  messageTemplateDAO;
+	@Override
+	public void afterReturning(Object returnValue, Method method,
+			Object[] args, Object target) throws Throwable {
+		
+		Registration registration = (Registration) args[0];
+		String mailTemplate = ((AccountService) target).EMAIL_TEMPLATE;
+		
+		System.out.println("email has been sent out.");
+	}
+
+	
+	@Override
+	public void before(Method method, Object[] args, Object target)
+			throws Throwable {
+		System.out.println("try to authentication.");
+	}
+}

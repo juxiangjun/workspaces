@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+#coding utf-8
+
+from stock.dao.user_dao import UserDAO
+from stock.model.user import User
+from myebs import app
+
+dao = UserDAO()
+@app.route('/admin/cron/update', method=['GET', 'POST'])
+def update():
+	user = User()
+	user.name = 'tju'
+	user.password = 'pwd'
+	dao.add(user)	
+	return 'success'
