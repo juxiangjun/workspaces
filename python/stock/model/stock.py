@@ -9,7 +9,7 @@ from utils.app_util import get_now
 Base = declarative_base()
 
 class Stock(Base):
-	__tablename__ = 'stock'
+	__tablename__ = 'stk_info'
 
 	id=Column(String, primary_key=True)
 	code = Column(String)

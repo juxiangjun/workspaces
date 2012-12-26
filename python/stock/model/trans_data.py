@@ -9,7 +9,7 @@ from utils.app_util import get_now, get_data
 Base = declarative_base()
 
 class TransData(Base):
-	__tablename__ = 'trans_data'
+	__tablename__ = 'stk_trans_data'
 
 	id=Column(String, primary_key=True)
 	stock_code = Column(String)

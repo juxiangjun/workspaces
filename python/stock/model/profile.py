@@ -7,7 +7,7 @@ from utils.app_util import get_now, get_data
 Base = declarative_base()
 
 class Profile(Base):
-	__tablename__ = 'profile'
+	__tablename__ = 'stk_profile'
 
 	id=Column(String, primary_key=True)
 	stock_id = Column(String)

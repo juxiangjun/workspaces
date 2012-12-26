@@ -9,7 +9,7 @@ from utils.app_util import get_now, get_data
 Base = declarative_base()
 
 class Dividend(Base):
-	__tablename__ = 'dividend'
+	__tablename__ = 'stk_dividend'
 
 	id=Column(String, primary_key=True)
 	stock_code = Column(String)
